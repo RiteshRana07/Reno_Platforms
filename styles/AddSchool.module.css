@@ -1,0 +1,232 @@
+.body {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+  box-sizing: border-box;
+}
+
+.navbar {
+  max-width: 100%;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.navbar .nav-links {
+  display: flex; 
+  gap: 1rem; 
+}
+
+.navbar a {
+  color: #0a3562;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #e9ecef;
+}
+
+.homeLink {
+  color: #0a3562;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.homeLink:hover {
+  background-color: #e9ecef;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: #e9ecef;
+}
+
+.school-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+/* School Card Styling */
+.school-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.school-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.school-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.school-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(90deg, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.form-container input {
+  display: block;
+  width: 90%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.5);
+}
+
+.form-container span {
+  color: #e63946;
+  font-size: 0.875rem;
+  margin-top: -0.75rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.form-container button {
+  height: auto; 
+  padding: 0.8rem; 
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  margin: 0 auto; 
+  display: block; 
+}
+
+.form-container button:hover {
+  transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    text-align: center;
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .homeLink,
+  .link {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.2rem;
+    gap: 10.13rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+
+  .navbar a {
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .form-container {
+    padding: 1.2rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .school-card {
+    padding: 0.8rem;
+  }
+
+  .school-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .school-card p {
+    font-size: 0.9rem;
+  }
+}
