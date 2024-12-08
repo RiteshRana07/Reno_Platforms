@@ -1,23 +1,24 @@
-import mysql from 'mysql2/promise';
+// /pages/api/getSchools.js
+import mysql from 'mysql2';
 
-const dbConfig = {
-  host: 'localhost',
-  user: 'root',
-  password: 'rana12',
-  database: 'school_management',
-};
+export default function handler(req, res) {
+  const connection = mysql.createConnection({
+    host: process.env.DATABASE_HOST, // Use environment variables
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME,
+  });
 
-export default async function handler(req, res) {
-  if (req.method === 'GET') {
-    try {
-      const connection = await mysql.createConnection(dbConfig);
-      const [rows] = await connection.execute('SELECT id, name, address, city, image FROM schools');
-      connection.end();
-      res.status(200).json(rows);
-    } catch (error) {
-      res.status(500).json({ error: 'Database error!' });
+  const query = 'SELECT * FROM schools';
+
+  connection.query(query, (err, results) => {
+    if (err) {
+      console.error('Error fetching schools:', err);
+      res.status(500).json({ error: 'Error fetching schools' });
+      return;
     }
-  } else {
-    res.status(405).json({ error: 'Method not allowed!' });
-  }
+    res.status(200).json(results);
+  });
+
+  connection.end();
 }
