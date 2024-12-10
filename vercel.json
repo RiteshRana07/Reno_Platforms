@@ -9,7 +9,7 @@
     },
     "routes": [
     {
-      "src": "/api/addSchool",
+      "src": "/api/addSchool.js",
       "dest": "/api/addSchool.js"
     }
   ]
