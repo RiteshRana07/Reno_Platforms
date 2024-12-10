@@ -1,6 +1,12 @@
 {
     "version": 2,
- 
+    "env": {
+      "DATABASE_HOST": "bppxccaqo5wcdu7ekzue-mysql.services.clever-cloud.com",
+      "DATABASE_USER": "ux0l3kfaohi3my4p",
+      "DATABASE_PASSWORD": "3D2FHBF4ATHKnPoi3e0B",
+      "DATABASE_NAME": "bppxccaqo5wcdu7ekzue",
+      "DATABASE_PORT": "3306"
+    },
     "routes": [
     {
       "src": "/api/addSchool.js",
