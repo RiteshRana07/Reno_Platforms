@@ -6,6 +6,12 @@
       "DATABASE_PASSWORD": "3D2FHBF4ATHKnPoi3e0B",
       "DATABASE_NAME": "bppxccaqo5wcdu7ekzue",
       "DATABASE_PORT": "3306"
+    },
+    "routes": [
+    {
+      "src": "/api/addSchool",
+      "dest": "/api/addSchool.js"
     }
+  ]
   }
   
